@@ -39,7 +39,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-sm uppercase tracking-widest text-muted-foreground mb-1">Our Location</p>
-                    <p className="text-2xl font-josefin font-bold">[Your Business Address Here]</p>
+                    <p className="text-2xl font-josefin font-bold">UK</p>
                   </div>
                 </div>
               </div>
