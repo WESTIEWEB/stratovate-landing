@@ -23,7 +23,7 @@ const services = [
     highlight: true,
     isExternal: true,
     isProduct: true,
-    bgAsset: "/C:/Users/ilo/.gemini/antigravity/brain/55ef0815-768d-4723-b000-5f8cb195d3e8/service_lexlytic_abstraction_1773073144042.png"
+    bgAsset: "/hero-graphic.png"
   },
   {
     title: "Training",
@@ -37,7 +37,7 @@ const services = [
     icon: <BookOpen className="w-12 h-12 text-primary" />,
     cta: "Ask About Training",
     href: "/contact",
-    bgAsset: "/C:/Users/ilo/.gemini/antigravity/brain/55ef0815-768d-4723-b000-5f8cb195d3e8/service_training_abstraction_1773073160619.png"
+    bgAsset: "/hero-graphic.png"
   },
   {
     title: "Consulting",
@@ -51,7 +51,7 @@ const services = [
     icon: <Users className="w-12 h-12 text-primary" />,
     cta: "Request Support",
     href: "/contact",
-    bgAsset: "/C:/Users/ilo/.gemini/antigravity/brain/55ef0815-768d-4723-b000-5f8cb195d3e8/service_consulting_abstraction_1773073178349.png"
+    bgAsset: "/hero-graphic.png"
   }
 ];
 
@@ -89,8 +89,8 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: i * 0.1 }}
               className={cn(
-                "group relative p-12 rounded-[3.5rem] border border-border bg-white transition-all duration-700 hover:-translate-y-4 flex flex-col h-full overflow-hidden",
-                service.highlight ? "premium-shadow ring-1 ring-primary/20 scale-105 z-10" : "hover:shadow-2xl grayscale-[0.5] hover:grayscale-0"
+                "group relative p-12 rounded-[3.5rem] border border-border bg-white transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl flex flex-col h-full overflow-hidden",
+                service.highlight ? "premium-shadow ring-1 ring-primary/20 scale-105 z-10 hover:ring-primary/40" : "hover:shadow-2xl grayscale-[0.5] hover:grayscale-0 hover:border-primary/20"
               )}
             >
               {/* Background 3D Composition */}
@@ -106,11 +106,11 @@ export const Services = () => {
               </div>
 
               <div className="flex justify-between items-start mb-10">
-                <div className="p-5 bg-primary/5 rounded-[2rem] group-hover:scale-110 group-hover:bg-primary/10 transition-all duration-500 shadow-inner">
+                <div className="p-5 bg-gradient-to-br from-primary/10 to-blue-400/5 rounded-[2rem] group-hover:scale-110 group-hover:bg-primary/15 transition-all duration-500 shadow-inner border border-primary/10">
                   {service.icon}
                 </div>
                 {service.isProduct && (
-                  <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full border border-green-500/20">
+                  <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full border border-green-500/20 animate-pulse">
                     <span className="relative flex h-2 w-2">
                       <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                       <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
@@ -147,14 +147,17 @@ export const Services = () => {
                 href={service.href}
                 target={service.isExternal ? "_blank" : undefined}
                 className={cn(
-                  "w-full py-5 rounded-[2rem] font-bold text-xl transition-all active:scale-95 text-center flex items-center justify-center group/btn",
+                  "w-full py-5 rounded-[2rem] font-bold text-xl transition-all active:scale-95 text-center flex items-center justify-center group/btn overflow-hidden",
                   service.highlight 
-                    ? "bg-primary text-white shadow-2xl shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02]" 
-                    : "bg-secondary text-foreground hover:bg-muted"
+                    ? "bg-gradient-to-r from-primary to-blue-600 text-white shadow-2xl shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02]" 
+                    : "bg-secondary text-foreground hover:bg-muted border border-border hover:border-primary/20"
                 )}
               >
-                {service.cta}
+                <span className="relative z-10">{service.cta}</span>
                 {service.isExternal && <ArrowUpRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />}
+                {service.highlight && (
+                  <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
+                )}
               </Link>
             </motion.div>
           ))}

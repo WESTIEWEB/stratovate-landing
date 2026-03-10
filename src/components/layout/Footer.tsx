@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from "lucide-react";
 
 export const Footer = () => {
@@ -25,14 +26,22 @@ export const Footer = () => {
           </div>
 
           <div className="flex space-x-6">
-            {[Linkedin, Twitter, Facebook, Instagram].map((Icon, i) => (
-              <Link 
-                key={i} 
-                href="#" 
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:bg-white hover:text-primary hover:border-white transition-all duration-300"
+            {[
+              { Icon: Facebook, href: "#", label: "Facebook" },
+              { Icon: Twitter, href: "#", label: "Twitter" },
+              { Icon: Linkedin, href: "#", label: "LinkedIn" },
+              { Icon: Instagram, href: "#", label: "Instagram" }
+            ].map(({ Icon, href, label }, i) => (
+              <motion.a
+                key={i}
+                href={href}
+                aria-label={label}
+                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:bg-white hover:text-primary hover:border-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+                whileHover={{ rotate: 5 }}
+                whileTap={{ scale: 0.95 }}
               >
-                <Icon size={20} />
-              </Link>
+                <Icon size={20} className="group-hover:scale-110 transition-transform" />
+              </motion.a>
             ))}
           </div>
         </div>
@@ -47,12 +56,15 @@ export const Footer = () => {
             <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
 
-          <button 
+          <motion.button 
             onClick={scrollToTop}
-            className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/10 hover:bg-white hover:text-primary transition-all shadow-lg active:scale-95"
+            className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-white border border-white/10 hover:bg-white hover:text-primary hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-xl group"
+            whileHover={{ rotate: 360 }}
+            transition={{ duration: 0.6 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <ArrowUp size={20} />
-          </button>
+            <ArrowUp size={20} className="group-hover:-translate-y-1 transition-transform" />
+          </motion.button>
         </div>
       </div>
     </footer>

@@ -105,6 +105,14 @@
   .animate-float {
     animation: float 6s ease-in-out infinite;
   }
+
+  .animate-glow {
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s linear infinite;
+  }
 }
 
 @keyframes pulseSubtle {
@@ -115,6 +123,16 @@
 @keyframes float {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-20px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 20px rgba(16, 46, 80, 0.1); }
+  100% { box-shadow: 0 0 30px rgba(16, 46, 80, 0.2), 0 0 40px rgba(16, 46, 80, 0.1); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
 }
 
 /* Custom Scrollbar */
