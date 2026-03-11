@@ -40,7 +40,7 @@ export const Navbar = () => {
             />
           </div>
           <span className="font-josefin text-2xl font-bold tracking-tighter text-primary group-hover:text-primary/90 transition-colors">
-            STRATOVATE<span className="text-foreground italic"> TECHNOLOGIES</span>
+            STRATOVATE TECHNOLOGIES
           </span>
         </Link>
 

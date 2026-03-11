@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   },
 };
 
+import { ThemeProvider } from "@/components/theme-provider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -33,10 +35,16 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${poppins.variable} ${josefin.variable} scroll-smooth`} suppressHydrationWarning>
       <body className="font-sans antialiased bg-background text-foreground"
-      suppressHydrationWarning
+        suppressHydrationWarning
       >
-
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
