@@ -21,7 +21,7 @@ export const Contact = () => {
               Move forward with clarity, capability, and confidence.
             </h3>
             <p className="text-xl text-muted-foreground leading-relaxed font-medium mb-12">
-              Whether you need premium training, strategic consulting, or intelligent solutions like Lexlytic, Stratovate Technologies is ready to help you take the next step with purpose.
+              Advance your organization with premium training, strategic consulting, and intelligent solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 mb-16">
@@ -66,7 +66,7 @@ export const Contact = () => {
             <div className="space-y-8 text-center">
               <h4 className="text-3xl font-josefin font-bold mb-4 italic">Ready to transform your operations?</h4>
               <p className="text-lg text-muted-foreground font-medium mb-8">
-                Experience the power of Lexlytic and our strategic guidance. Our team is ready to discuss your specific goals and build a solution that delivers measurable results.
+                Our team is ready to discuss your specific goals and build a solution that delivers measurable results.
               </p>
               <Link href="/contact" className="inline-flex bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-xl shadow-primary/20 hover:scale-[1.02] transition-all active:scale-95">
                 Book Your Consultation <ArrowRight className="ml-2 w-5 h-5" />

@@ -29,7 +29,7 @@ export const Resources = () => {
               <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-4">Direct Impact</h2>
               <h3 className="text-4xl md:text-6xl font-josefin font-bold mb-8 italic leading-tight">What makes working with us possible</h3>
               <p className="text-xl text-muted-foreground leading-relaxed font-medium mb-8">
-                When you partner with Stratovate Technologies, you gain more than a service—you gain focused support designed to improve how you learn, operate, and grow.
+                Gain focused support designed to improve how you learn, operate, and grow.
               </p>
             </motion.div>
 

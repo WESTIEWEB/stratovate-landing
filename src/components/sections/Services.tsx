@@ -10,7 +10,7 @@ import Link from "next/link";
 const services = [
   {
     title: "Lexlytic",
-    description: "Intelligent insight for sharper thinking and smarter execution. Built to support analysis and informed decision-making, Lexlytic enables businesses to act on stronger insights. As business environments become more data-driven and complex, Lexlytic provides a smarter way to interpret information, streamline workflows, and support better outcomes.",
+    description: "Intelligent insight for smarter decisions.",
     highlights: [
       { text: "Supports informed, insight-driven decisions", icon: <BarChart3 className="w-4 h-4 text-primary" /> },
       { text: "Improves visibility and analytical clarity", icon: <ShieldCheck className="w-4 h-4 text-primary" /> },
@@ -27,7 +27,7 @@ const services = [
   },
   {
     title: "Training",
-    description: "Practical learning designed for modern performance. Our training programs are built for individuals and organizations that want more than information; they want capability. We deliver structured, relevant, and practical learning experiences that help professionals build confidence, strengthen competence, and apply what they learn in real working environments.",
+    description: "Practical learning for modern capability.",
     highlights: [
       { text: "Practical, application-focused learning", icon: <Target className="w-4 h-4 text-primary" /> },
       { text: "Customizable sessions for teams and organizations", icon: <Users className="w-4 h-4 text-primary" /> },
@@ -41,7 +41,7 @@ const services = [
   },
   {
     title: "Consulting",
-    description: "Strategic guidance for better decisions and stronger outcomes. Our consulting services help businesses navigate complexity with greater structure, insight, and confidence. We work with clients to identify challenges, improve processes, refine direction, and make smarter business and technology decisions.",
+    description: "Strategic guidance for complex challenges.",
     highlights: [
       { text: "Business and technology strategy support", icon: <Layers className="w-4 h-4 text-primary" /> },
       { text: "Operational improvement guidance", icon: <BarChart3 className="w-4 h-4 text-primary" /> },
@@ -78,9 +78,7 @@ export const Services = () => {
               Strategic Solutions for <br className="hidden md:block" />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-500 to-primary/80">Modern Growth</span>
             </h3>
-            <p className="text-sm md:text-base text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed border-x border-primary/20 px-4 py-1">
-              Practical, high-value solutions that integrate deep learning, strategic guidance, and intelligent tools.
-            </p>
+            <div className="h-1 w-24 bg-primary/20 rounded-full mx-auto mt-6" />
           </motion.div>
         </div>
 

@@ -55,10 +55,10 @@ export const CoreValues = () => {
               <div className="glass p-10 md:p-14 rounded-[3.5rem] border-border premium-shadow relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16" />
                 <p className="text-2xl leading-relaxed text-foreground font-josefin font-bold mb-8 italic">
-                  "We provide premium support through carefully designed training, insight-led consulting, and intelligent solutions that address real business needs with precision and purpose."
+                  "Rather than offering complexity for its own sake, we focus on what is useful, practical, and capable of delivering meaningful results."
                 </p>
                 <p className="text-lg leading-relaxed text-muted-foreground font-medium">
-                  Rather than offering complexity for its own sake, we focus on what is useful, practical, and capable of delivering meaningful results. Whether you are looking to strengthen your team, improve operational direction, or adopt smarter ways of working, Stratovate Technologies delivers solutions aligned with growth, performance, and long-term value.
+                  Whether you are looking to strengthen your team, improve operational direction, or adopt smarter ways of working, Stratovate Technologies delivers solutions aligned with growth, performance, and long-term value.
                 </p>
               </div>
             </motion.div>

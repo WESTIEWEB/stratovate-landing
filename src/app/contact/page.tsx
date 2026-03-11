@@ -69,12 +69,9 @@ export default function ContactPage() {
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h1 className="text-5xl md:text-7xl font-josefin font-bold mb-8 leading-tight italic">
+              <h1 className="text-5xl md:text-7xl font-josefin font-bold mb-12 leading-tight italic">
                 Move forward with <br /><span className="text-primary">clarity, capability, and confidence.</span>
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed mb-12 italic">
-                Whether you need premium training, strategic consulting, or intelligent solutions like Lexlytic, Stratovate Technologies is ready to help you take the next step with purpose.
-              </p>
 
               <div className="space-y-10">
                 <div className="flex items-start">
@@ -99,7 +96,7 @@ export default function ContactPage() {
               </div>
 
               <p className="mt-16 text-muted-foreground border-l-4 border-primary pl-6 italic max-w-lg leading-relaxed">
-                We welcome conversations with businesses and professionals looking for practical, high-value support.
+                Connect with us for practical, high-value support.
               </p>
             </div>
 
@@ -111,7 +108,7 @@ export default function ContactPage() {
                   </div>
                   <h2 className="text-4xl font-josefin font-bold italic">Message Sent!</h2>
                   <p className="text-xl text-muted-foreground italic max-w-sm mx-auto">
-                    Thank you for reaching out. Our team will review your request and get back to you shortly.
+                    Thanks for reaching out! Our team will get back to you shortly.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 pt-6">
                     <button
@@ -130,7 +127,7 @@ export default function ContactPage() {
                 </div>
               ) : (
                 <>
-                  <h2 className="text-3xl font-josefin font-bold mb-8 italic">Speak with our team.</h2>
+                  <h2 className="text-3xl font-josefin font-bold mb-8 italic">Let's Talk.</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid sm:grid-cols-2 gap-6">
                       <div className="space-y-2">

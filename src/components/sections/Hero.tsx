@@ -104,7 +104,7 @@ export const Hero = () => {
             </motion.div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-josefin font-bold leading-[1.1] tracking-tighter mb-12">
-              Practical innovation for <br className="hidden md:block" />
+              Elevating <br className="hidden md:block" />
               <motion.span
                 className="text-gradient bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent"
                 animate={{
@@ -113,14 +113,10 @@ export const Hero = () => {
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                 style={{ backgroundSize: '200% 200%' }}
               >
-                organizations
+                businesses
               </motion.span>
-              {" "}that want to move with clarity, capability, and confidence.
+              {" "}through precision and capability.
             </h1>
-
-            <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-2xl leading-relaxed font-medium italic border-l-4 border-primary/20 pl-6">
-              Stratovate Technologies helps forward-thinking businesses and professionals solve challenges, strengthen capability, and make smarter decisions through premium training, strategic consulting, and intelligent solutions like Lexlytic.
-            </p>
 
             <div className="flex flex-col sm:flex-row items-center gap-8">
               <Link
