@@ -57,104 +57,110 @@ const services = [
 
 export const Services = () => {
   return (
-    <section id="services" className="py-24 md:py-40 relative overflow-hidden bg-muted/30">
+    <section id="services" className="min-h-screen min-h-[100svh] w-full relative overflow-hidden bg-gradient-to-b from-muted/30 to-background flex flex-col justify-center py-12 md:py-16">
       {/* Background Graphic elements */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
-      
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-5xl mx-auto mb-24">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px] -z-10 -translate-x-1/2 translate-y-1/2" />
+
+      <div className="container mx-auto px-4 md:px-6 z-10">
+        <div className="text-center max-w-4xl mx-auto mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-2xl font-black tracking-[0.4em] text-primary uppercase mb-8 opacity-80">Our Expertise</h2>
-            <h3 className="text-6xl md:text-8xl lg:text-9xl font-josefin font-bold mb-10 leading-[0.9]">
-              Strategic Solutions for <br />
-              <span className="text-gradient">Modern Growth</span>
+            <div className="inline-flex items-center justify-center space-x-2 mb-4 px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-md">
+              <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+              <h2 className="text-xs md:text-sm font-black tracking-[0.2em] text-primary uppercase">Our Expertise</h2>
+            </div>
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-josefin font-bold mb-4 leading-tight">
+              Strategic Solutions for <br className="hidden md:block" />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-500 to-primary/80">Modern Growth</span>
             </h3>
-            <p className="text-xl md:text-3xl text-muted-foreground font-medium max-w-3xl mx-auto leading-relaxed italic border-x-2 border-primary/10 px-8">
+            <p className="text-sm md:text-base text-muted-foreground font-medium max-w-2xl mx-auto leading-relaxed border-x border-primary/20 px-4 py-1">
               Practical, high-value solutions that integrate deep learning, strategic guidance, and intelligent tools.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-10">
+        <div className="grid lg:grid-cols-3 gap-6 items-stretch max-w-6xl mx-auto">
           {services.map((service, i) => (
-            <motion.div 
+            <motion.div
               key={i}
-              initial={{ opacity: 0, y: 40 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: i * 0.1 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
               className={cn(
-                "group relative p-12 rounded-[3.5rem] border border-border bg-white transition-all duration-700 hover:-translate-y-4 hover:shadow-2xl flex flex-col h-full overflow-hidden",
-                service.highlight ? "premium-shadow ring-1 ring-primary/20 scale-105 z-10 hover:ring-primary/40" : "hover:shadow-2xl grayscale-[0.5] hover:grayscale-0 hover:border-primary/20"
+                "group relative p-6 md:p-8 rounded-[2rem] border bg-white/70 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full overflow-hidden",
+                service.highlight
+                  ? "border-primary/40 shadow-xl shadow-primary/20 ring-1 ring-primary/30 lg:scale-[1.02] z-10"
+                  : "border-white/40 shadow-lg shadow-black/5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:bg-white/95"
               )}
             >
               {/* Background 3D Composition */}
               <div className="absolute inset-0 -z-10 opacity-[0.08] group-hover:opacity-[0.15] group-hover:scale-110 transition-all duration-1000">
                 {service.bgAsset && (
-                  <Image 
-                    src={service.bgAsset} 
-                    alt="" 
-                    fill 
+                  <Image
+                    src={service.bgAsset}
+                    alt=""
+                    fill
                     className="object-cover mix-blend-multiply"
                   />
                 )}
               </div>
 
-              <div className="flex justify-between items-start mb-10">
-                <div className="p-5 bg-gradient-to-br from-primary/10 to-blue-400/5 rounded-[2rem] group-hover:scale-110 group-hover:bg-primary/15 transition-all duration-500 shadow-inner border border-primary/10">
-                  {service.icon}
+              <div className="flex justify-between items-start mb-6">
+                <div className="p-3 bg-gradient-to-br from-primary/10 to-blue-400/10 rounded-2xl group-hover:scale-110 group-hover:bg-primary/20 transition-all duration-500 shadow-inner border border-primary/20">
+                  {React.cloneElement(service.icon as any, { className: "w-6 h-6 text-primary group-hover:rotate-12 transition-transform" })}
                 </div>
                 {service.isProduct && (
-                  <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/10 text-green-600 rounded-full border border-green-500/20 animate-pulse">
-                    <span className="relative flex h-2 w-2">
-                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  <div className="flex items-center space-x-1.5 px-3 py-1 bg-emerald-500/15 text-emerald-700 rounded-full border border-emerald-500/30 shadow-sm animate-pulse">
+                    <span className="relative flex h-1.5 w-1.5">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-500"></span>
                     </span>
-                    <span className="text-[10px] font-black uppercase tracking-widest">Live Product</span>
+                    <span className="text-[9px] font-black uppercase tracking-wider">Live</span>
                   </div>
                 )}
               </div>
-              
-              <h4 className="text-4xl font-josefin font-bold mb-8 group-hover:text-primary transition-colors flex items-center">
+
+              <h4 className="text-2xl font-josefin font-bold mb-3 group-hover:text-primary transition-colors flex items-center">
                 {service.title}
-                {service.isExternal && <ArrowUpRight className="ml-2 w-6 h-6 opacity-0 -translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all" />}
+                {service.isExternal && <ArrowUpRight className="ml-1 w-5 h-5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />}
               </h4>
-              
-              <p className="text-lg md:text-xl text-muted-foreground mb-10 flex-grow leading-relaxed font-medium">
+
+              <p className="text-xs md:text-sm text-muted-foreground mb-6 flex-grow leading-relaxed font-medium line-clamp-3">
                 {service.description}
               </p>
-              
-              <div className="space-y-5 mb-12">
+
+              <ul className="space-y-2.5 mb-8">
                 {service.highlights.map((h, j) => (
-                  <div key={j} className="flex items-center space-x-4 group/highlight">
-                    <div className="p-2 bg-primary/5 rounded-xl group-hover/highlight:bg-primary group-hover/highlight:text-white transition-all duration-300">
-                      {React.cloneElement(h.icon as any, { 
-                        className: cn("w-4 h-4 transition-colors", 
-                        "group-hover/highlight:text-white text-primary")
+                  <li key={j} className="flex items-center space-x-3 group/highlight">
+                    <div className="p-1.5 bg-primary/10 rounded-lg group-hover/highlight:bg-primary group-hover/highlight:text-white transition-all duration-300 flex-shrink-0">
+                      {React.cloneElement(h.icon as any, {
+                        className: cn("w-3.5 h-3.5 transition-colors",
+                          "group-hover/highlight:text-white text-primary")
                       })}
                     </div>
-                    <span className="text-sm font-bold text-foreground/70 group-hover/highlight:text-foreground transition-colors">{h.text}</span>
-                  </div>
+                    <span className="text-xs font-semibold text-foreground/80 group-hover/highlight:text-foreground transition-colors">{h.text}</span>
+                  </li>
                 ))}
-              </div>
-              
-              <Link 
+              </ul>
+
+              <Link
                 href={service.href}
                 target={service.isExternal ? "_blank" : undefined}
                 className={cn(
-                  "w-full py-5 rounded-[2rem] font-bold text-xl transition-all active:scale-95 text-center flex items-center justify-center group/btn overflow-hidden",
-                  service.highlight 
-                    ? "bg-gradient-to-r from-primary to-blue-600 text-white shadow-2xl shadow-primary/20 hover:shadow-primary/40 hover:scale-[1.02]" 
-                    : "bg-secondary text-foreground hover:bg-muted border border-border hover:border-primary/20"
+                  "mt-auto w-full py-3 md:py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95 text-center flex items-center justify-center group/btn overflow-hidden relative",
+                  service.highlight
+                    ? "bg-gradient-to-r from-primary to-blue-600 text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/40 hover:scale-[1.02]"
+                    : "bg-white text-foreground hover:bg-gray-50 border border-border hover:border-primary/30 shadow-sm"
                 )}
               >
                 <span className="relative z-10">{service.cta}</span>
-                {service.isExternal && <ArrowUpRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />}
+                {service.isExternal && <ArrowUpRight className="ml-1.5 w-4 h-4 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />}
                 {service.highlight && (
                   <div className="absolute inset-0 bg-gradient-to-r from-white/10 to-transparent opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300" />
                 )}

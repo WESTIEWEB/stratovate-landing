@@ -14,7 +14,7 @@ const PARTICLES = [
     delay: i * 0.6,
     top: (i * 19 + 9) % 90 + 5,
     left: (i * 29 + 13) % 90 + 5,
-    size: Math.random() * 2 + 1,
+    size: ((i * 7 + 11) % 20) / 10 + 1, // Range: 1.1 - 2.9
     type: 'dot'
   })),
   ...Array(4).fill(null).map((_, i) => ({
@@ -23,7 +23,7 @@ const PARTICLES = [
     delay: i * 1.2 + 2,
     top: (i * 31 + 15) % 80 + 10,
     left: (i * 37 + 19) % 80 + 10,
-    size: Math.random() * 3 + 2,
+    size: ((i * 13 + 17) % 30) / 10 + 2, // Range: 2.0 - 4.9
     type: 'sparkle'
   }))
 ];
@@ -59,11 +59,10 @@ export const Hero = () => {
               repeat: Infinity,
               delay: p.delay,
             }}
-            className={`absolute rounded-full ${
-              p.type === 'sparkle' 
-                ? 'bg-gradient-to-r from-primary/60 to-blue-400/60 shadow-lg shadow-primary/20' 
-                : 'bg-primary/40'
-            }`}
+            className={`absolute rounded-full ${p.type === 'sparkle'
+              ? 'bg-gradient-to-r from-primary/60 to-blue-400/60 shadow-lg shadow-primary/20'
+              : 'bg-primary/40'
+              }`}
             style={{
               top: `${p.top}%`,
               left: `${p.left}%`,
@@ -104,12 +103,12 @@ export const Hero = () => {
               <span>Leading Global Innovation</span>
             </motion.div>
 
-            <h1 className="text-7xl md:text-9xl lg:text-10xl font-josefin font-bold leading-[0.92] tracking-tighter mb-12">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-josefin font-bold leading-[0.92] tracking-tighter mb-12">
               Clarity. <br />
-              <motion.span 
+              <motion.span
                 className="text-gradient bg-gradient-to-r from-primary via-blue-600 to-primary bg-clip-text text-transparent"
-                animate={{ 
-                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] 
+                animate={{
+                  backgroundPosition: ['0% 50%', '100% 50%', '0% 50%']
                 }}
                 transition={{ duration: 5, repeat: Infinity, ease: "linear" }}
                 style={{ backgroundSize: '200% 200%' }}
@@ -153,7 +152,7 @@ export const Hero = () => {
                 { icon: Zap, label: "High Performance", color: "text-yellow-600" },
                 { icon: TrendingUp, label: "Proven Results", color: "text-purple-600" }
               ].map((item, i) => (
-                <motion.div 
+                <motion.div
                   key={i}
                   className="flex items-center space-x-3 group"
                   whileHover={{ scale: 1.1 }}
@@ -220,7 +219,7 @@ export const Hero = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <div className="flex justify-between text-sm font-bold uppercase tracking-widest opacity-70">
                     <span>Client Satisfaction</span>
