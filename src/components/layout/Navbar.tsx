@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import NextImage from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar = () => {
@@ -24,24 +25,31 @@ export const Navbar = () => {
   ];
 
   return (
-    <nav 
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        scrolled ? "py-4 glass border-b border-white/20 shadow-lg backdrop-blur-xl" : "py-6 bg-transparent"
-      }`}
+    <nav
+      className={`fixed top-0 w-full z-50 transition-all duration-500 ${scrolled ? "py-4 glass border-b border-white/20 shadow-lg backdrop-blur-xl" : "py-6 bg-transparent"
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href="/" className="group flex items-center space-x-2">
-          <span className="font-josefin text-2xl font-bold tracking-tighter text-primary group-hover:scale-105 transition-transform">
-            STRATOVATE<span className="text-foreground transition-colors group-hover:text-primary/80 italic"> TECHNOLOGIES</span>
+        <Link href="/" className="group flex items-center space-x-3">
+          <div className="relative w-10 h-10 group-hover:scale-110 transition-transform duration-300">
+            <NextImage
+              src="/logo.png"
+              alt="Stratovate Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <span className="font-josefin text-2xl font-bold tracking-tighter text-primary group-hover:text-primary/90 transition-colors">
+            STRATOVATE<span className="text-foreground italic"> TECHNOLOGIES</span>
           </span>
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (
-            <Link 
-              key={link.name} 
-              href={link.href} 
+            <Link
+              key={link.name}
+              href={link.href}
               className="text-sm font-semibold text-foreground/80 hover:text-primary transition-all duration-300 relative group px-3 py-2 rounded-lg hover:bg-primary/5"
             >
               {link.name}
@@ -49,8 +57,8 @@ export const Navbar = () => {
             </Link>
           ))}
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link 
-              href="/contact" 
+            <Link
+              href="/contact"
               className="bg-gradient-to-r from-primary to-blue-600 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300 border border-white/20"
             >
               Book a Consultation
@@ -60,8 +68,8 @@ export const Navbar = () => {
 
 
         {/* Mobile Toggle */}
-        <button 
-          className="md:hidden p-3 text-foreground hover:bg-primary/10 rounded-xl transition-colors duration-300" 
+        <button
+          className="md:hidden p-3 text-foreground hover:bg-primary/10 rounded-xl transition-colors duration-300"
           onClick={() => setIsOpen(!isOpen)}
         >
           <motion.div
@@ -96,7 +104,7 @@ export const Navbar = () => {
       {/* Mobile Nav */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: -20, scale: 0.95 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: -20, scale: 0.95 }}
@@ -111,9 +119,9 @@ export const Navbar = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link 
-                    href={link.href} 
-                    onClick={() => setIsOpen(false)} 
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
                     className="text-xl font-bold text-foreground border-b border-border/50 pb-2 hover:text-primary hover:border-primary/50 transition-all duration-300 block py-3 px-4 rounded-lg hover:bg-primary/5"
                   >
                     {link.name}
@@ -126,9 +134,9 @@ export const Navbar = () => {
                 transition={{ delay: 0.3 }}
                 className="pt-4"
               >
-                <Link 
-                  href="#contact" 
-                  onClick={() => setIsOpen(false)} 
+                <Link
+                  href="/contact"
+                  onClick={() => setIsOpen(false)}
                   className="bg-gradient-to-r from-primary to-blue-600 text-white px-5 py-4 rounded-2xl text-center font-bold shadow-xl hover:shadow-2xl transition-all duration-300 block w-full"
                 >
                   Book a Consultation

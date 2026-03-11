@@ -10,29 +10,29 @@ import Link from "next/link";
 const services = [
   {
     title: "Lexlytic",
-    description: "Intelligent insight for smarter execution. Our proprietary product built to support high-level analysis and informed leadership for modern enterprises.",
+    description: "Intelligent insight for sharper thinking and smarter execution. Built to support analysis and informed decision-making, Lexlytic enables businesses to act on stronger insights. As business environments become more data-driven and complex, Lexlytic provides a smarter way to interpret information, streamline workflows, and support better outcomes.",
     highlights: [
-      { text: "Informed, insight-driven decisions", icon: <BarChart3 className="w-4 h-4 text-primary" /> },
-      { text: "Improved analytical clarity", icon: <ShieldCheck className="w-4 h-4 text-primary" /> },
-      { text: "Streamlined workflow efficiency", icon: <Zap className="w-4 h-4 text-primary" /> },
-      { text: "Scalable enterprise solution", icon: <Globe className="w-4 h-4 text-primary" /> }
+      { text: "Supports informed, insight-driven decisions", icon: <BarChart3 className="w-4 h-4 text-primary" /> },
+      { text: "Improves visibility and analytical clarity", icon: <ShieldCheck className="w-4 h-4 text-primary" /> },
+      { text: "Helps streamline workflow efficiency", icon: <Zap className="w-4 h-4 text-primary" /> },
+      { text: "Scalable for evolving business needs", icon: <Globe className="w-4 h-4 text-primary" /> }
     ],
     icon: <Lightbulb className="w-12 h-12 text-primary" />,
     cta: "Discover Lexlytic",
     href: "https://www.lexlytic.com/",
-    highlight: true,
     isExternal: true,
     isProduct: true,
+    highlight: true,
     bgAsset: "/hero-graphic.png"
   },
   {
     title: "Training",
-    description: "Practical learning designed for modern performance. Our programs are built for individuals and organizations that want capability, not just information.",
+    description: "Practical learning designed for modern performance. Our training programs are built for individuals and organizations that want more than information; they want capability. We deliver structured, relevant, and practical learning experiences that help professionals build confidence, strengthen competence, and apply what they learn in real working environments.",
     highlights: [
       { text: "Practical, application-focused learning", icon: <Target className="w-4 h-4 text-primary" /> },
-      { text: "Customizable sessions for teams", icon: <Users className="w-4 h-4 text-primary" /> },
-      { text: "Digital-ready skill development", icon: <Cpu className="w-4 h-4 text-primary" /> },
-      { text: "Clear, measurable outcomes", icon: <Layout className="w-4 h-4 text-primary" /> }
+      { text: "Customizable sessions for teams and organizations", icon: <Users className="w-4 h-4 text-primary" /> },
+      { text: "Relevant skill development for today’s digital environment", icon: <Cpu className="w-4 h-4 text-primary" /> },
+      { text: "Clear outcomes that support performance and growth", icon: <Layout className="w-4 h-4 text-primary" /> }
     ],
     icon: <BookOpen className="w-12 h-12 text-primary" />,
     cta: "Ask About Training",
@@ -41,15 +41,15 @@ const services = [
   },
   {
     title: "Consulting",
-    description: "Strategic guidance for sharper decisions. We help businesses navigate complexity with greater structure and analytical insight.",
+    description: "Strategic guidance for better decisions and stronger outcomes. Our consulting services help businesses navigate complexity with greater structure, insight, and confidence. We work with clients to identify challenges, improve processes, refine direction, and make smarter business and technology decisions.",
     highlights: [
-      { text: "Business & tech strategy support", icon: <Layers className="w-4 h-4 text-primary" /> },
+      { text: "Business and technology strategy support", icon: <Layers className="w-4 h-4 text-primary" /> },
       { text: "Operational improvement guidance", icon: <BarChart3 className="w-4 h-4 text-primary" /> },
-      { text: "Process refinement & optimization", icon: <Cpu className="w-4 h-4 text-primary" /> },
-      { text: "Practical digital transformation", icon: <Zap className="w-4 h-4 text-primary" /> }
+      { text: "Process refinement and decision support", icon: <Cpu className="w-4 h-4 text-primary" /> },
+      { text: "Practical direction for digital transformation initiatives", icon: <Zap className="w-4 h-4 text-primary" /> }
     ],
     icon: <Users className="w-12 h-12 text-primary" />,
-    cta: "Request Support",
+    cta: "Request Consulting Support",
     href: "/contact",
     bgAsset: "/hero-graphic.png"
   }
@@ -131,7 +131,7 @@ export const Services = () => {
                 {service.isExternal && <ArrowUpRight className="ml-1 w-5 h-5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300" />}
               </h4>
 
-              <p className="text-xs md:text-sm text-muted-foreground mb-6 flex-grow leading-relaxed font-medium line-clamp-3">
+              <p className="text-sm md:text-base text-muted-foreground mb-6 flex-grow leading-relaxed font-medium">
                 {service.description}
               </p>
 

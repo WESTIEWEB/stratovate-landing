@@ -35,8 +35,8 @@ export const Resources = () => {
 
             <div className="space-y-6">
               {outcomes.map((item, i) => (
-                <motion.div 
-                  key={i} 
+                <motion.div
+                  key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -44,7 +44,7 @@ export const Resources = () => {
                   className="flex items-start p-8 glass rounded-[2rem] border-primary/5 hover:translate-x-2 transition-transform duration-300"
                 >
                   <div className="mr-6 mt-1">
-                    <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20">{i+1}</span>
+                    <span className="flex items-center justify-center w-8 h-8 rounded-xl bg-primary text-white text-sm font-bold shadow-lg shadow-primary/20">{i + 1}</span>
                   </div>
                   <p className="text-xl font-bold text-foreground/80 leading-snug">{item}</p>
                 </motion.div>
