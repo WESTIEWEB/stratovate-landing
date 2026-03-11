@@ -34,7 +34,7 @@ export const CoreValues = () => {
               <div className="grid grid-cols-3 gap-4 max-w-sm">
                 {[1, 2, 3].map((num) => (
                   <div key={num} className="group relative">
-                    <div className="w-16 h-16 bg-primary/5 rounded-2xl flex items-center justify-center font-bold text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 border border-primary/10">
+                    <div className="w-16 h-16 bg-primary/10 dark:bg-primary/20 rounded-2xl flex items-center justify-center font-bold text-primary group-hover:bg-primary group-hover:text-white transition-all duration-300 border border-border/50">
                       {num}
                     </div>
                   </div>
@@ -52,8 +52,8 @@ export const CoreValues = () => {
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-blue-400/10 to-transparent blur-[80px] -z-10" />
 
-              <div className="glass p-10 md:p-14 rounded-[3.5rem] border-white/40 premium-shadow relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
+              <div className="glass p-10 md:p-14 rounded-[3.5rem] border-border premium-shadow relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full -mr-16 -mt-16" />
                 <p className="text-2xl leading-relaxed text-foreground font-josefin font-bold mb-8 italic">
                   "We provide premium support through carefully designed training, insight-led consulting, and intelligent solutions that address real business needs with precision and purpose."
                 </p>

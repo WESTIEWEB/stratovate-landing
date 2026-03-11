@@ -93,10 +93,10 @@ export const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className={cn(
-                "group relative p-6 md:p-8 rounded-[2rem] border bg-white/70 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full overflow-hidden",
+                "group relative p-6 md:p-8 rounded-[2rem] border bg-card/70 dark:bg-card/40 backdrop-blur-xl transition-all duration-500 hover:-translate-y-2 flex flex-col h-full overflow-hidden",
                 service.highlight
                   ? "border-primary/40 shadow-xl shadow-primary/20 ring-1 ring-primary/30 lg:scale-[1.02] z-10"
-                  : "border-white/40 shadow-lg shadow-black/5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:bg-white/95"
+                  : "border-border/50 shadow-lg shadow-black/5 hover:border-primary/30 hover:shadow-xl hover:shadow-primary/10 hover:bg-card/90"
               )}
             >
               {/* Background 3D Composition */}
@@ -156,7 +156,7 @@ export const Services = () => {
                   "mt-auto w-full py-3 md:py-3.5 rounded-xl font-bold text-sm transition-all active:scale-95 text-center flex items-center justify-center group/btn overflow-hidden relative",
                   service.highlight
                     ? "bg-gradient-to-r from-primary to-blue-600 text-white shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/40 hover:scale-[1.02]"
-                    : "bg-white text-foreground hover:bg-gray-50 border border-border hover:border-primary/30 shadow-sm"
+                    : "bg-background text-foreground hover:bg-muted/50 border border-border hover:border-primary/30 shadow-sm"
                 )}
               >
                 <span className="relative z-10">{service.cta}</span>

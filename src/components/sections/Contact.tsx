@@ -28,7 +28,7 @@ export const Contact = () => {
               <Link href="/contact" className="bg-primary text-white px-10 py-5 rounded-full font-bold text-lg shadow-2xl shadow-primary/30 hover:scale-105 transition-all active:scale-95 flex items-center justify-center">
                 Contact Us Today <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-              <Link href="/contact" className="bg-white border-2 border-primary/10 text-foreground px-10 py-5 rounded-full font-bold text-lg hover:bg-muted/50 transition-all flex items-center justify-center">
+              <Link href="/contact" className="bg-card border-2 border-border text-foreground px-10 py-5 rounded-full font-bold text-lg hover:bg-muted/50 transition-all flex items-center justify-center">
                 Speak With Our Team
               </Link>
             </div>

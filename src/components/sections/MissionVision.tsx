@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export const MissionVision = () => {
     return (
-        <section className="py-24 md:py-32 bg-muted/10 relative overflow-hidden">
+        <section className="py-24 md:py-32 bg-muted/20 relative overflow-hidden">
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 md:gap-20">
                     <motion.div
@@ -13,7 +13,7 @@ export const MissionVision = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
-                        className="p-10 md:p-16 rounded-[3rem] bg-white border border-primary/5 shadow-xl shadow-black/5"
+                        className="p-10 md:p-16 rounded-[3rem] bg-card border border-border/50 shadow-xl shadow-black/5"
                     >
                         <h2 className="text-sm font-black tracking-[0.2em] text-primary uppercase mb-6">Our Mission</h2>
                         <p className="text-2xl md:text-3xl font-josefin font-bold leading-tight text-foreground italic">

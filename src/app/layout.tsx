@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "Stratovate Technologies | Clarity, Capability, Confidence",
   description: "Practical innovation for organizations wanting to move with clarity, capability, and confidence through premium training, strategic consulting, and intelligent solutions.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/logo.png",
   },
 };
 

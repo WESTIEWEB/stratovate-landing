@@ -39,7 +39,7 @@ export const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
     return (
-        <section className="py-24 md:py-32 bg-white">
+        <section className="py-24 md:py-32 bg-background">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="max-w-3xl mx-auto">
                     <div className="text-center mb-16">
@@ -52,10 +52,10 @@ export const FAQ = () => {
                             <div key={i} className="border border-border rounded-3xl overflow-hidden transition-all duration-300 hover:border-primary/30">
                                 <button
                                     onClick={() => setActiveIndex(activeIndex === i ? null : i)}
-                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none bg-white"
+                                    className="w-full flex items-center justify-between p-6 md:p-8 text-left focus:outline-none bg-card hover:bg-muted/50 transition-colors"
                                 >
                                     <span className="text-lg md:text-xl font-bold text-foreground">{faq.question}</span>
-                                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${activeIndex === i ? "rotate-180 text-primary" : "text-muted-foreground"}`} />
+                                    <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${activeIndex === i ? "rotate-180 text-primary" : "text-muted-foreground/60"}`} />
                                 </button>
                                 <AnimatePresence>
                                     {activeIndex === i && (

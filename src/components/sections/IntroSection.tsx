@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export const IntroSection = () => {
     return (
-        <section className="py-24 md:py-32 bg-white relative overflow-hidden">
+        <section className="py-24 md:py-32 bg-background relative overflow-hidden">
             {/* Subtle background decoration */}
             <div className="absolute top-1/2 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -translate-y-1/2 -ml-32" />
 
@@ -16,6 +16,7 @@ export const IntroSection = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
+                        className="p-10 md:p-16 rounded-[3rem] bg-card border border-border pb-12 shadow-xl shadow-black/5"
                     >
                         <h2 className="text-sm font-black tracking-[0.2em] text-primary uppercase mb-6">Introduction</h2>
                         <h3 className="text-3xl md:text-5xl font-josefin font-bold mb-10 leading-tight">
@@ -41,6 +42,6 @@ export const IntroSection = () => {
                     </motion.div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };

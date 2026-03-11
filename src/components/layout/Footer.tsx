@@ -11,7 +11,7 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="py-20 bg-primary text-white relative overflow-hidden transition-colors duration-300">
+    <footer className="py-20 bg-primary dark:bg-[#0a1a2f] text-white relative overflow-hidden transition-colors duration-300 border-t border-border/10">
       <div className="absolute top-[-50px] right-[-50px] w-64 h-64 bg-white/5 rounded-full blur-[80px]" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

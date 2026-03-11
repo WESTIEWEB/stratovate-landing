@@ -157,7 +157,7 @@ export const Hero = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ type: "spring", stiffness: 400, damping: 10 }}
                 >
-                  <div className={`p-2 rounded-xl bg-white/50 backdrop-blur-sm border border-white/20 shadow-sm group-hover:shadow-md transition-all duration-300`}>
+                  <div className={`p-2 rounded-xl bg-card border border-border/40 shadow-sm group-hover:shadow-md transition-all duration-300`}>
                     <item.icon className={`w-5 h-5 ${item.color}`} />
                   </div>
                   <div className="hidden sm:block">
@@ -175,13 +175,13 @@ export const Hero = () => {
             className="relative hidden lg:block"
           >
             {/* Main Focal Asset */}
-            <div className="relative z-10 premium-shadow rounded-[4rem] overflow-hidden bg-white/50 backdrop-blur-sm border border-white/40">
+            <div className="relative z-10 dark:shadow-[0_40px_80px_-20px_rgba(0,0,0,0.8)] rounded-[4rem] overflow-hidden bg-card/50 backdrop-blur-sm border border-border/50">
               <Image
                 src="/hero-graphic.png"
                 alt="Premium Innovation"
                 width={1000}
                 height={1000}
-                className="w-full h-auto object-cover opacity-90 mix-blend-multiply hover:scale-105 transition-transform duration-1000"
+                className="w-full h-auto object-cover opacity-90 mix-blend-multiply dark:mix-blend-normal hover:scale-105 transition-transform duration-1000"
                 priority
               />
             </div>
@@ -191,7 +191,7 @@ export const Hero = () => {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 1, duration: 1 }}
-              className="absolute -top-12 -right-12 glass p-8 rounded-[2rem] max-w-[280px] z-20 border-white/60"
+              className="absolute -top-12 -right-12 glass p-8 rounded-[2rem] max-w-[280px] z-20 border-border"
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-2">
